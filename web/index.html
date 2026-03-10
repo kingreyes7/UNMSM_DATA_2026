@@ -33,7 +33,7 @@
         
         /* Transparencia reducida para apreciar mejor fondobiblioteca.jpg */
         .hero-bg { 
-            background: linear-gradient(rgba(0, 26, 61, 0.70), rgba(15, 23, 42, 0.80)), url('Fotos/fondobiblioteca.jpg');
+            background: linear-gradient(rgba(0, 26, 61, 0.70), rgba(15, 23, 42, 0.80)), url('../Fotos/fondobiblioteca.jpg');
             background-size: cover; background-position: center;
         }
 
@@ -178,7 +178,7 @@
         document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); loadCSV(); });
 
         function loadCSV() {
-            Papa.parse("Extracciones/DATASET - GENERAL/GENERAL3.csv", {
+            Papa.parse("../Extracciones/DATASET - GENERAL/GENERAL3.csv", {
                 download: true, header: true, delimiter: ";", skipEmptyLines: true,
                 complete: function(results) {
                     rawData = results.data.map(row => {
