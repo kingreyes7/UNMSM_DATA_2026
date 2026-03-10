@@ -11,7 +11,7 @@ El proyecto combina **extracción de datos en Python, procesamiento de datasets 
 👉 Puedes explorar el dashboard interactivo aquí:
 
 **Demo:**
-https://kingreyes7.github.io/unmsm-dashboard
+https://kingreyes7.github.io/UNMSM_DATA_2026/web/index.html
 
 ---
 
