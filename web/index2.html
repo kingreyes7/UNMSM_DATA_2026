@@ -46,10 +46,9 @@
         .sortable { cursor: pointer; transition: color 0.2s; }
         .sortable:hover { color: #3b82f6; }
 
-        /* Mejora visual de la tabla en móvil */
         @media (max-width: 768px) {
             .table-responsive { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-            .hero-bg { min-height: 350px; }
+            .hero-bg { min-height: 400px; }
         }
     </style>
 </head>
@@ -69,15 +68,17 @@
         </div>
     </nav>
 
-    <header class="hero-bg flex items-center justify-center text-center px-6 pt-24 pb-12">
+    <!-- Header con espaciado aumentado en la parte inferior -->
+    <header class="hero-bg flex items-center justify-center text-center px-6 pt-32 pb-24 md:pt-40 md:pb-32">
         <div class="max-w-4xl">
-            <h2 class="text-3xl md:text-7xl font-black text-white mb-4 md:mb-6 leading-tight">Resultados de Admisión <br><span class="text-blue-400">UNMSM 2026</span></h2>
+            <h2 class="text-3xl md:text-7xl font-black text-white mb-6 md:mb-8 leading-tight">Resultados de Admisión <br><span class="text-blue-400">UNMSM 2026</span></h2>
             <p class="text-slate-100 text-sm md:text-xl font-medium max-w-2xl mx-auto opacity-90 px-4"> Explora los puntajes máximos, mínimos y tasas de selectividad de la Decana de América</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 md:px-6 -mt-12 md:-mt-20 relative z-10 pb-16 md:pb-24">
-        <!-- Stats -->
+    <!-- Main con margen negativo reducido para dar más aire -->
+    <main class="max-w-7xl mx-auto px-4 md:px-6 -mt-10 md:-mt-16 relative z-10 pb-16 md:pb-24">
+        <!-- Stats Grid -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-12">
             <div class="glass-card p-4 md:p-7 rounded-2xl md:rounded-[2rem] border-l-4 md:border-l-8 border-l-blue-600">
                 <p class="text-[10px] md:text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1 md:mb-2">Total Postulantes</p>
@@ -130,7 +131,7 @@
                     <thead>
                         <tr class="text-slate-900 dark:text-slate-400 text-[10px] md:text-xs font-black uppercase tracking-widest">
                             <th class="px-4 md:px-6 py-2">Carrera</th>
-                            <th class="px-2 md:px-6 py-2 text-center sortable" onclick="handleSort('PUNTAJE MÁXIMO')">Máx ↕</th>
+                            <th class="px-2 md:px-6 py-2 text-center sortable" onclick="handleSort('MÁXIMO')">Máx ↕</th>
                             <th class="px-2 md:px-6 py-2 text-center sortable" onclick="handleSort('MÍNIMO')">Mín ↕</th>
                             <th class="px-2 md:px-6 py-2 text-center sortable" onclick="handleSort('POSTULANTES')">Post. ↕</th>
                             <th class="px-4 md:px-6 py-2 text-right sortable" onclick="handleSort('% INGRESO')">Éxito ↕</th>
@@ -142,7 +143,6 @@
         </div>
     </main>
 
-    <!-- Footer corregido -->
     <footer class="bg-unmsm-navy text-white py-10 md:py-12 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col items-center">
             <img src="../Fotos/logo-unmsm.svg" alt="Logo" class="h-12 md:h-16 mb-6 drop-shadow-2xl">
@@ -150,16 +150,16 @@
                 © DERECHOS RESERVADOS 2026 | <span class="text-blue-400 font-black">Sandro Miñope</span> 
             </p>
             <div class="flex gap-6 md:gap-8">
-                <a href="https://github.com/kingreyes7/UNMSM_DATA_2026" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                <a href="https://github.com/kingreyes7/UNMSM_DATA_2026" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/sandro-mi%C3%B1ope-688807188/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/sandro-mi%C3%B1ope-688807188/" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <i data-lucide="linkedin" class="w-5 h-5"></i>
                 </a>
-                <a href="https://www.youtube.com/@ingesandrex" target="_blank" rel="noopener noreferrer" class="social-btn" title="YouTube">
+                <a href="https://www.youtube.com/@ingesandrex" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <i data-lucide="youtube" class="w-5 h-5"></i>
                 </a>
-                <a href="https://www.tiktok.com/@academiahawking_" target="_blank" rel="noopener noreferrer" class="social-btn" title="TikTok">
+                <a href="https://www.tiktok.com/@academiahawking_" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-1.881V3h-3.364v13.243c0 1.606-1.304 2.91-2.91 2.91s-2.91-1.304-2.91-2.91 1.304-2.91 2.91-2.91c.282 0 .554.04.813.113V9.888a6.274 6.274 0 0 0-.813-.052A6.364 6.364 0 1 0 16.91 16.2V9.769a8.158 8.158 0 0 0 4.678 1.456V7.86a4.82 4.82 0 0 1-1.999-.474z"/>
                     </svg>
@@ -303,7 +303,7 @@
                         backgroundColor: ledPalette, 
                         borderWidth: 2, 
                         borderColor: isDark ? '#0f172a' : '#ffffff',
-                        hoverOffset: 15 // Reestablecido el movimiento bonito
+                        hoverOffset: 15
                     }] 
                 }, 
                 options: { 
